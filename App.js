@@ -117,13 +117,13 @@ const App: () => Node = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <Appbar style={[styles.bottom, {marginBottom: 10}]}>
-        <Appbar.Content title="Github Profiles" subtitle="by Marcus" />
-      </Appbar>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
+        <Appbar style={[styles.bottom, {marginBottom: 10}]}>
+          <Appbar.Content title="Github Profiles" subtitle="by Marcus" />
+        </Appbar>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
