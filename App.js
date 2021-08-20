@@ -71,16 +71,6 @@ const UserLookup = ({onSubmit}): Node => {
 
   return (
     <View>
-      {/*<Text*/}
-      {/*  style={[*/}
-      {/*    styles.sectionTitle,*/}
-      {/*    {*/}
-      {/*      color: Colors.black,*/}
-      {/*      borderStyle: 'dotted',*/}
-      {/*    },*/}
-      {/*  ]}>*/}
-      {/*  Enter GitHub Username:*/}
-      {/*</Text>*/}
       <Controller
         control={control}
         rules={{
