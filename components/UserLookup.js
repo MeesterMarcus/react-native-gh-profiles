@@ -1,14 +1,14 @@
-import React from 'react';
-import {Controller, useForm} from 'react-hook-form';
-import axios from 'axios';
-import {Text, View} from 'react-native';
-import {Button, TextInput} from 'react-native-paper';
+import React from "react";
+import { Controller, useForm } from "react-hook-form";
+import axios from "axios";
+import { Text, View } from "react-native";
+import { Button, TextInput } from "react-native-paper";
 
-const UserLookup = ({onSubmit}): Node => {
+const UserLookup = ({ onSubmit }): Node => {
   const {
     control,
     handleSubmit,
-    formState: {errors},
+    formState: { errors },
   } = useForm();
   const submit = async data => {
     const response = await axios.get(
@@ -24,7 +24,7 @@ const UserLookup = ({onSubmit}): Node => {
         rules={{
           required: true,
         }}
-        render={({field: {onChange, onBlur, value}}) => (
+        render={({ field: { onChange, onBlur, value } }) => (
           <TextInput
             onBlur={onBlur}
             label="GitHub Username"
@@ -40,8 +40,8 @@ const UserLookup = ({onSubmit}): Node => {
         style={{
           marginTop: 10,
           marginBottom: 10,
-          width: '50%',
-          alignSelf: 'center',
+          width: "50%",
+          alignSelf: "center",
         }}
         mode="contained"
         onPress={handleSubmit(submit)}>

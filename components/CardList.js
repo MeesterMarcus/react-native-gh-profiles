@@ -1,8 +1,8 @@
-import React from 'react';
-import {Avatar, Card, Colors, IconButton, Paragraph} from 'react-native-paper';
+import React from "react";
+import { Avatar, Card, Colors, IconButton, Paragraph } from "react-native-paper";
 import { View } from "react-native";
 
-const CardList = ({profiles, onDelete}): Node => {
+const CardList = ({ profiles, onDelete }): Node => {
   const deleteIt = id => {
     onDelete(id);
   };
@@ -12,7 +12,7 @@ const CardList = ({profiles, onDelete}): Node => {
         <Card.Title
           title={profile.login}
           left={() => (
-            <Avatar.Image size={42} source={{uri: profile.avatar_url}} />
+            <Avatar.Image size={42} source={{ uri: profile.avatar_url }} />
           )}
         />
         <Card.Content>
