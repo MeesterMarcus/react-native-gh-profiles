@@ -34,6 +34,13 @@ const App: () => Node = () => {
     setProfiles(oldArray => [...oldArray, profileData]);
   };
 
+  const removeProfile = profileId => {
+    const array = [...profiles];
+    const index = array.indexOf(profileId);
+    array.splice(index, 1);
+    setProfiles(array);
+  };
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <ScrollView
@@ -48,7 +55,7 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <UserLookup onSubmit={addNewProfile} />
-          <CardList profiles={profiles} />
+          <CardList onDelete={removeProfile} profiles={profiles} />
         </View>
       </ScrollView>
     </SafeAreaView>
