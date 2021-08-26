@@ -29,10 +29,8 @@ const App: () => Node = () => {
   };
 
   const removeProfile = profileId => {
-    const array = [...profiles];
-    const index = array.indexOf(profileId);
-    array.splice(index, 1);
-    setProfiles(array);
+    const newProfiles = profiles.filter((profile) => profile.id !== profileId);
+    setProfiles(newProfiles);
   };
 
   return (
